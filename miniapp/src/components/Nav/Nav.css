@@ -1,13 +1,18 @@
 .nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  padding: 0 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 18px;
+  box-sizing: border-box;
   background-color: #e53693;
   border-bottom: 3px solid #ff9ed5;
   box-shadow: 0px 4px 0px 0px #000;
-
-  .logo {
+  border .logo {
     width: 86px;
   }
 

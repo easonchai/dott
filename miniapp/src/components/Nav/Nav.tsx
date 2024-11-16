@@ -8,6 +8,7 @@ function Nav() {
       <a
         href='./'
         target='_blank'
+        className='home-logo'
       >
         <img
           src={dottLogo}

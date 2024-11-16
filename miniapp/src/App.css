@@ -1,11 +1,52 @@
 #root {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-align: center;
 }
 
 .home-container {
+  margin-top: 72px;
+  margin-bottom: 100px;
+  min-height: calc(100vh - 172px);
   background-color: #629af4;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .total-score {
+      padding: 24px;
+      text-align: left;
+    }
+
+    .artist-cards {
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+
+      .artist-cards-container {
+        overflow-x: auto;
+        display: flex;
+      }
+
+      .artist-cards-container::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .vocabulary {
+      height: 60px;
+      text-align: left;
+      padding: 24px;
+      margin: 0 24px 48px;
+      border-radius: 24px;
+      border: 2px solid #000;
+      background: #4ad29c;
+    }
+  }
 }
 
 @keyframes logo-spin {
