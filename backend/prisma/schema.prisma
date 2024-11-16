@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(uuid())
+  privvyId      String?
+  assistantId   String?
+  tgId          String         @unique
+  name          String
+  context       String?        @db.Text
+  conversations Conversation[]
+  messages      Message[]
+  scenarios     Scenario[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model Conversation {
+  id        String    @id @default(uuid())
+  language  String
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  messages  Message[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Message {
+  id             String       @id @default(uuid())
+  userId         String
+  conversationId String
+  memoryId       String?
+  nativeContent  String       @db.Text
+  targetContent  String       @db.Text
+  audioURL       String? // Just this for audio storage
+  user           User         @relation(fields: [userId], references: [id])
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Scenario {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  content   Json // Stores the entire scenario JSON
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

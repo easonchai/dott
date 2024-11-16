@@ -12,8 +12,7 @@ import "@coinbase/onchainkit/styles.css";
 import { Providers } from "./AppProviders";
 import Home from "./pages/Home";
 import Login from "./components/Login";
-
-// import ChatScreen from "./pages/Chat";
+import ChatScreen from "./pages/Chat";
 
 const App: React.FC = () => {
   return (
@@ -23,7 +22,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/chat" element={<ChatScreen />} /> */}
+          <Route path="/chat" element={<ChatScreen />} />
           {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
