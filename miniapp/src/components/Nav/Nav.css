@@ -1,0 +1,18 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: #e53693;
+  border-bottom: 3px solid #ff9ed5;
+  box-shadow: 0px 4px 0px 0px #000;
+
+  .logo {
+    width: 86px;
+  }
+
+  .user-profile {
+    width: 36px;
+    height: 36px;
+  }
+}

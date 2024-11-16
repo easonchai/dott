@@ -1,0 +1,9 @@
+.user-profile-container {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: #f9c705;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
