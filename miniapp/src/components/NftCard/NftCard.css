@@ -1,4 +1,5 @@
 .nft-card {
+  position: relative;
   flex: 0 0 auto;
   border-radius: 12px;
   border: 2.5px solid var(--Black, #1a1a1a);
@@ -13,6 +14,11 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  .item-price {
+    margin-top: 10px;
+    font-size: 12px;
   }
 
   .description {
