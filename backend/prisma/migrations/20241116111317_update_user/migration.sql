@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "User" ALTER COLUMN "score" SET DEFAULT 0,
+ALTER COLUMN "walletAddress" DROP NOT NULL;
