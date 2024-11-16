@@ -13,6 +13,9 @@ import { Providers } from './AppProviders';
 import Home from './pages/Home';
 import Login from './components/Login';
 import ChatScreen from './pages/Chat';
+import Profile from './pages/Profile';
+import Store from './pages/Store';
+import Rank from './pages/Rank';
 
 const App: React.FC = () => {
   return (
@@ -39,6 +42,18 @@ const App: React.FC = () => {
           <Route
             path='/chat'
             element={<ChatScreen />}
+          />
+          <Route
+            path='/profile'
+            element={<Profile />}
+          />
+          <Route
+            path='/store'
+            element={<Store />}
+          />
+          <Route
+            path='/rank'
+            element={<Rank />}
           />
           {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
           <Route
