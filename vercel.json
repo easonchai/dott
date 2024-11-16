@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "miniapp/package.json",
+      "use": "@vercel/react"
+    },
+    {
+      "src": "backend/api/**/*",
+      "use": "@vercel/node"
+    }
+  ]
+}
