@@ -1,6 +1,7 @@
 // src/App.tsx
 
 import React from "react";
+import { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,17 +10,22 @@ import {
 } from "react-router-dom";
 import "@coinbase/onchainkit/styles.css";
 import { Providers } from "./AppProviders";
-import Home from "./components/Home";
-// import ChatScreen from "./pages/ChatScreen";
+import Home from "./pages/Home";
+import Login from "./components/Login";
+
+// import ChatScreen from "./pages/Chat";
 
 const App: React.FC = () => {
   return (
     <Providers>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<div>404 Not Found</div>} />
+          {/* <Route path="/" element={<Home />} /> */}
           {/* <Route path="/chat" element={<ChatScreen />} /> */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
         </Routes>
       </Router>
     </Providers>

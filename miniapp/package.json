@@ -11,12 +11,17 @@
   },
   "dependencies": {
     "@coinbase/onchainkit": "^0.35.5",
+    "@dynamic-labs/ethereum": "^3.6.3",
+    "@dynamic-labs/global-wallet": "^3.6.3",
+    "@dynamic-labs/sdk-react-core": "^3.6.3",
     "axios": "^1.7.7",
     "lucide-react": "^0.460.0",
+    "next": "^15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "viem": "^2.17.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

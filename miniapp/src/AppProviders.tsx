@@ -1,5 +1,6 @@
 import { OnchainKitProvider } from "@coinbase/onchainkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { DynamicContextProvider } from "@dynamic-labs/sdk-react-core";
 import { getConfig } from "./wagmi";
 import { base } from "wagmi/chains";
 import { type ReactNode, useState } from "react";
@@ -19,7 +20,16 @@ export function Providers(props: {
           apiKey={import.meta.env.VITE_PUBLIC_ONCHAINKIT_API_KEY}
           chain={base} // add baseSepolia for testing
         >
-          {props.children}
+          <DynamicContextProvider
+            // settings={{
+            //   environmentId: `${import.meta.env.PUBLIC_DYNAMIC_ENV_ID}`,
+            // }}
+            settings={{
+              environmentId: import.meta.env.VITE_PUBLIC_DYNAMIC_ENV_ID, // Ensure this variable is properly set
+            }}
+          >
+            {props.children}
+          </DynamicContextProvider>
         </OnchainKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
