@@ -22,10 +22,10 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*" element={<div>404 Not Found</div>} />
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/home" element={<Home />} />
           {/* <Route path="/chat" element={<ChatScreen />} /> */}
           {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+          <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </Router>
     </Providers>

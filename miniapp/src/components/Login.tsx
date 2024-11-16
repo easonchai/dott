@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 import {
   DynamicWidget,
   useTelegramLogin,
@@ -10,6 +11,7 @@ const Login: React.FC = () => {
   const { sdkHasLoaded, user } = useDynamicContext();
   const { telegramSignIn } = useTelegramLogin();
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
     if (!sdkHasLoaded) return;
@@ -27,6 +29,13 @@ const Login: React.FC = () => {
 
     signIn();
   }, [sdkHasLoaded, user, telegramSignIn]);
+
+  useEffect(() => {
+    if (user) {
+      // Redirect to Home page if the user is logged in
+      navigate("/home");
+    }
+  }, [user, navigate]); // Ensure navigation happens when user changes
 
   return isLoading ? <Spinner /> : <DynamicWidget />;
 };
