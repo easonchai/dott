@@ -1,4 +1,10 @@
-ains: [base], // add baseSepolia for testing
+import { http, cookieStorage, createConfig, createStorage } from "wagmi";
+import { base } from "wagmi/chains"; // add baseSepolia for testing
+import { coinbaseWallet } from "wagmi/connectors";
+
+export function getConfig() {
+  return createConfig({
+    chains: [base], // add baseSepolia for testing
     connectors: [
       coinbaseWallet({
         appName: "OnchainKit",
