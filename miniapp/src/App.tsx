@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Chat from './pages/Chat';
 import Profile from './pages/Profile';
 import Store from './pages/Store';
-import Leaderboard from './pages/Leaderboard';
+import Rank from './pages/Rank';
 
 const App: React.FC = () => {
   return (
@@ -27,8 +27,8 @@ const App: React.FC = () => {
           element={<Store />}
         />
         <Route
-          path='/leaderboard'
-          element={<Leaderboard />}
+          path='/rank'
+          element={<Rank />}
         />
         <Route
           path='*'

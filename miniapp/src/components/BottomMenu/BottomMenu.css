@@ -11,6 +11,11 @@
   background: #f3ddb6;
   z-index: 1000;
 
+  a {
+    all: unset;
+    cursor: pointer;
+  }
+
   .menu {
     display: flex;
     height: 100px;

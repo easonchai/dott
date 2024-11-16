@@ -4,16 +4,16 @@ function BottomMenu() {
   return (
     <div className='menu-container'>
       <div className='menu'>
-        <div>Home</div>
+        <a href='/'>Home</a>
       </div>
       <div className='menu'>
-        <div>Store</div>
+        <a href='/store'>Store</a>
       </div>
       <div className='menu'>
-        <div>Chat</div>
+        <a href='/chat'>Chat</a>
       </div>
       <div className='menu'>
-        <div>Leaderboard</div>
+        <a href='/rank'>Rank</a>
       </div>
     </div>
   );
