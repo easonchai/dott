@@ -13,7 +13,7 @@ function BottomMenu() {
         <div>Chat</div>
       </div>
       <div className='menu'>
-        <div>Notebook</div>
+        <div>Leaderboard</div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import Nav from './components/Nav/Nav.tsx';
 ('./components/Nav');
 import BottomMenu from './components/BottomMenu/BottomMenu.tsx';
 import ArtistCard from './components/ArtistCard/ArtistCard.tsx';
+import DiscImage from './assets/disc.png';
 
 function App() {
   return (
@@ -11,19 +12,22 @@ function App() {
       <div className='content'>
         <div className='total-score'>
           <div className='score-number'>12,356</div>
-          <div>YOUR 한국어 SCORE</div>
+          <div className='user-score'>YOUR 한국어 SCORE</div>
         </div>
         <div className='artist-cards'>
-          <div>Get inspired by your favorite KPOP idols ✦</div>
+          <div className='artist-cards-cta'>
+            Get inspired by your<br></br> favorite KPOP idols ✦
+          </div>
           <div className='artist-cards-container'>
-            <ArtistCard />
             <ArtistCard />
             <ArtistCard />
             <ArtistCard />
           </div>
         </div>
         <div className='vocabulary'>
-          <div className=''>Dive into KPOP vocabulary!</div>
+          <div className='banner'>
+            Dive into KPOP<br></br>vocabulary!
+          </div>
         </div>
       </div>
       <BottomMenu />

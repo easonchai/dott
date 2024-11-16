@@ -1,10 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'GT-black';
+  src: url('./assets/fonts/GT-Walsheim-Black.woff') format('woff');
+  font: weight 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT-bold';
+  src: url('./assets/fonts/GT-Walsheim-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT-medium';
+  src: url('./assets/fonts/GT-Walsheim-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'GT-medium', sans-serif;
 }
