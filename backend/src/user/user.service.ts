@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Prisma } from '@prisma/client';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
@@ -28,9 +29,24 @@ export class UserService {
     score?: number;
     walletAddress?: string;
   }) {
+    let payload: Prisma.UserUpdateInput = {
+      name: data.name,
+      username: data.username,
+      walletAddress: data.walletAddress,
+    };
+
+    if (data.score) {
+      payload = {
+        ...payload,
+        score: {
+          increment: data.score,
+        },
+      };
+    }
+
     await this.prismaService.user.update({
       data: {
-        ...data,
+        ...payload,
       },
       where: {
         id: data.id,
