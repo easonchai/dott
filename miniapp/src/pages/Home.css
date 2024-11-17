@@ -1,0 +1,99 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.home-container {
+  margin-top: 72px;
+  margin-bottom: 100px;
+  min-height: calc(100vh - 172px);
+  background-color: #629af4;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .total-score {
+      margin-top: 16px;
+      padding: 24px;
+      text-align: left;
+
+      .score-number {
+        font-family: 'GT-black';
+        font-size: 48px;
+        color: #fff;
+        text-shadow: 0px 4px 0px #000;
+        margin-bottom: 12px;
+      }
+
+      .user-score {
+        font-family: 'GT-black';
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+
+    .artist-cards {
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+
+      .artist-cards-cta {
+        font-family: 'GT-black';
+        font-size: 20px;
+        color: #fff;
+      }
+
+      .artist-cards-container {
+        overflow-x: auto;
+        display: flex;
+      }
+
+      .artist-cards-container::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .vocabulary {
+      height: 60px;
+      text-align: left;
+      padding: 24px;
+      margin: 0 24px 48px;
+      border-radius: 24px;
+      border: 2px solid #000;
+      background: #4ad29c;
+
+      .banner {
+        font-family: 'GT-bold';
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
